@@ -12,9 +12,13 @@ export default defineType({
       type: 'object',
 
       fields: [
-        defineField({ name: 'badgeIcon', title: 'Badge Icon', type: 'image' }),
-        defineField({ name: 'title', title: 'Title', type: 'string', validation: (Rule) => Rule.required() }),
-        defineField({ name: 'subtitle', title: 'Subtitle', type: 'string' }),
+        defineField({
+          name: 'title',
+          title: 'Title',
+          type: 'string',
+          validation: (Rule) => Rule.required(),
+        }),
+        defineField({name: 'subtitle', title: 'Subtitle', type: 'string'}),
       ],
     }),
     defineField({
@@ -23,14 +27,19 @@ export default defineType({
       type: 'object',
 
       fields: [
-        defineField({ name: 'eyebrow', title: 'Eyebrow Label', type: 'string' }),
-        defineField({ name: 'heading', title: 'Heading', type: 'string', validation: (Rule) => Rule.required() }),
-        defineField({ name: 'description', title: 'Description', type: 'text', rows: 4 }),
+        defineField({name: 'eyebrow', title: 'Eyebrow Label', type: 'string'}),
+        defineField({
+          name: 'heading',
+          title: 'Heading',
+          type: 'string',
+          validation: (Rule) => Rule.required(),
+        }),
+        defineField({name: 'description', title: 'Description', type: 'text', rows: 4}),
         defineField({
           name: 'features',
-          title: 'Feature Pills',
+          title: 'Features',
           type: 'array',
-          of: [{ type: 'featurePill' }],
+          of: [{type: 'features'}],
           validation: (Rule) => Rule.max(3),
         }),
       ],
@@ -41,13 +50,13 @@ export default defineType({
       type: 'object',
 
       fields: [
-        defineField({ name: 'heading', title: 'Heading', type: 'string' }),
-        defineField({ name: 'description', title: 'Description', type: 'text', rows: 2 }),
+        defineField({name: 'heading', title: 'Heading', type: 'string'}),
+        defineField({name: 'description', title: 'Description', type: 'text', rows: 2}),
         defineField({
           name: 'items',
           title: 'Stat Items',
           type: 'array',
-          of: [{ type: 'statItem' }],
+          of: [{type: 'statItem'}],
           validation: (Rule) => Rule.max(3),
         }),
       ],
@@ -56,7 +65,7 @@ export default defineType({
       name: 'caseStudies',
       title: 'Case Study Cards',
       type: 'array',
-      of: [{ type: 'caseStudyCard' }],
+      of: [{type: 'caseStudyCard'}],
       validation: (Rule) => Rule.min(1),
     }),
     defineField({
@@ -65,4 +74,9 @@ export default defineType({
       type: 'seo',
     }),
   ],
-});
+  preview: {
+    prepare() {
+      return {title: 'Success Stories Page'}
+    },
+  }
+})
