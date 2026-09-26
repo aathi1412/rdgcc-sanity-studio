@@ -7,22 +7,22 @@ export default defineType({
 
   fields: [
     defineField({
-      name: 'logo',
-      title: 'Logo',
+      name: 'siteLogo',
+      title: 'Site Logo',
       type: 'image',
     }),
 
     defineField({
-      name: 'certificationIcon',
-      title: 'Google Certification Icon',
+      name: 'GoogleIcon',
+      title: 'Google Icon',
       type: 'image',
-      description: 'Google certification logo',
+      description: 'Google certification Icon',
       fields: [
         defineField({
           name: 'alt',
           title: 'Alt text',
           type: 'string',
-          description: 'Required if the badge is set, for accessibility.',
+          description: 'For accessibility.',
         }),
       ],
     }),
@@ -41,8 +41,14 @@ export default defineType({
     }),
 
     defineField({
-      name: 'footerBlurb',
-      title: 'Footer Blurb',
+      name: 'footerLogo',
+      title: 'footer Logo',
+      type: 'image'
+    }),
+
+    defineField({
+      name: 'footerOutro',
+      title: 'Footer Outro',
       type: 'text',
       rows: 3,
     }),
