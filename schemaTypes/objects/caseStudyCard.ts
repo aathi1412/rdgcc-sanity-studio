@@ -34,6 +34,26 @@ export default defineType({
       ],
     }),
     defineField({
+      name: "icon",
+      title: "Icon",
+      type: "string",
+      options: {
+        list: [
+          { title: "Brain", value: "brain" },
+          { title: "Code", value: "code" },
+          { title: "Laptop", value: "laptop" },
+          { title: "Shopping Cart", value: "shopping-cart" },
+          { title: "Mails", value: "mails" },
+          { title: "Grid 2x2", value: "grid-2x2" },
+          { title: "Handshake", value: "handshake" },
+          { title: "Chart Line", value: "chart-line" },
+          { title: "File Text", value: "file-text" },
+          { title: "Shopping Basket", value: "shopping-basket" },
+        ],
+      },
+    }),
+
+    defineField({
       name: 'title',
       title: 'Service Title',
       type: 'string',
