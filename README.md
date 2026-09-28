@@ -104,6 +104,19 @@ Content types are defined in `schemaTypes/` and registered in `sanity.config.ts`
 
 <!-- Optional: add a table of the document/object types and their purpose here. -->
 
+## Content Management
+
+The Studio provides editable content for the RDGCC Success Stories page, including:
+
+- Site settings and navigation
+- Header and footer content
+- Success Stories page content
+- Case study cards
+- Images and image alt text
+- CTA labels and URLs
+- Feature icons
+- SEO title and description
+
 ## Assumptions
 
 - Node.js and npm are installed locally; the project uses npm (`package-lock.json`).
@@ -113,6 +126,16 @@ Content types are defined in `schemaTypes/` and registered in `sanity.config.ts`
 - The `production` dataset is used by default.
 - Deploying with `npm run deploy` assumes the user is logged in to Sanity and has deploy permission for the project.
 - This repository is the content-management side only; any website consuming the content lives elsewhere.
+
+## Deployment
+
+The Sanity Studio is deployed using Sanity's hosting.
+
+The deployed Studio requires Sanity authentication. Users must have access to the Sanity project to sign in and manage content.
+
+The deployed Studio URL is:
+
+https://rdgcc-success-stories.sanity.studio
 
 ## Contributing
 
