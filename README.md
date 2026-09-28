@@ -102,8 +102,6 @@ Main technologies: Sanity `^6.16.0`, React `^19.2.4`, styled-components, and Typ
 
 Content types are defined in `schemaTypes/` and registered in `sanity.config.ts` through the `schemaTypes` export. Open the Studio after setup to see the available document types and their fields.
 
-<!-- Optional: add a table of the document/object types and their purpose here. -->
-
 ## Content Management
 
 The Studio provides editable content for the RDGCC Success Stories page, including:
@@ -119,13 +117,13 @@ The Studio provides editable content for the RDGCC Success Stories page, includi
 
 ## Assumptions
 
-- Node.js and npm are installed locally; the project uses npm (`package-lock.json`).
-- A Sanity project and dataset already exist, and the person running the Studio has access to them.
-- Each developer supplies their own `.env` file based on `.env.example`; real values are not committed.
-- `sanity.config.ts` (the Studio) reads the project ID and dataset from environment variables, while `sanity.cli.ts` (CLI commands such as `deploy`) has them set directly. Both are assumed to point to the same project and dataset.
-- The `production` dataset is used by default.
-- Deploying with `npm run deploy` assumes the user is logged in to Sanity and has deploy permission for the project.
-- This repository is the content-management side only; any website consuming the content lives elsewhere.
+- Node.js and npm are installed locally and the project uses npm.
+- A Sanity project and `production` dataset already exist.
+- The person running the Studio has access to the Sanity project.
+- Each developer provides their own `.env` file based on `.env.example`; real environment values are not committed.
+- `sanity.config.ts` reads the project ID and dataset from environment variables, while `sanity.cli.ts` uses its configured project and dataset for CLI operations. Both are assumed to reference the same Sanity project and dataset.
+- Deploying with `npm run deploy` requires the user to be authenticated with Sanity and have the required permissions.
+- The Sanity Studio is maintained separately from the Astro frontend.
 
 ## Deployment
 
@@ -136,12 +134,6 @@ The deployed Studio requires Sanity authentication. Users must have access to th
 The deployed Studio URL is:
 
 https://rdgcc-success-stories.sanity.studio
-
-## Contributing
-
-1. Create a branch for your change.
-2. Follow the Prettier settings in `package.json` (no semicolons, single quotes, 100-character line width) and the existing ESLint configuration.
-3. Open a pull request describing the change.
 
 ## License
 
