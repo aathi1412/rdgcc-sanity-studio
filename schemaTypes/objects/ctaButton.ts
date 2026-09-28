@@ -15,7 +15,7 @@ export default defineType({
       name: 'url',
       title: 'URL',
       type: 'string',
-      description: 'Internal path (e.g. /case-studies/kristal-ai) or full external URL.',
+      description: 'URL for the button (e.g. "/case-studies/kristal.ai")',
       validation: (Rule) => Rule.required(),
     }),
   ],
