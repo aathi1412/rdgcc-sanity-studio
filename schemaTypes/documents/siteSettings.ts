@@ -89,7 +89,7 @@ export default defineType({
 
     defineField({
       name: 'copyrightText',
-      title: 'Copyright / Bottom Bar Text',
+      title: 'Copyright',
       type: 'string',
     }),
 
@@ -98,7 +98,7 @@ export default defineType({
       title: 'Legal Links (bottom bar)',
       type: 'array',
       of: [{ type: 'footerLink' }],
-      description: 'e.g. Privacy Policy, Terms & Conditions',
+      description: 'Privacy Policy, Terms & Conditions',
     }),
   ],
   preview: {
