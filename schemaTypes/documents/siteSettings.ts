@@ -13,7 +13,7 @@ export default defineType({
     }),
 
     defineField({
-      name: 'GoogleIcon',
+      name: 'googleIcon',
       title: 'Google Icon',
       type: 'image',
       description: 'Google certification Icon',
