@@ -5,10 +5,10 @@ import {schemaTypes} from './schemaTypes'
 
 export default defineConfig({
   name: 'default',
-  title: 'rdgcc-sanity-studio',
+  title: 'RDGCC Sanity Studio',
 
-  projectId: 'ge7glcjb',
-  dataset: 'production',
+  projectId: import.meta.env.SANITY_STUDIO_PROJECT_ID,
+  dataset: import.meta.env.SANITY_STUDIO_DATASET,
 
   plugins: [structureTool(), visionTool()],
 
