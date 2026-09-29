@@ -137,4 +137,4 @@ https://rdgcc-success-stories.sanity.studio
 
 ## License
 
-Marked as `UNLICENSED` and `private` in `package.json`. No license is granted for reuse.
+This project is licensed under the MIT License. See the LICENSE file for details.
